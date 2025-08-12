@@ -1,4 +1,3 @@
-
 (async () => {
   const { PublicKey, Connection, Transaction, SystemProgram, TransactionInstruction } = solanaWeb3;
 
@@ -511,3 +510,4 @@ document.querySelectorAll(".moveBtn").forEach(btn => {
   refreshRankingBtn.onclick = loadRanking;
 
 })();
+
