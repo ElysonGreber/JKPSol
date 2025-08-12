@@ -7,12 +7,16 @@ body {
   padding: 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #00fff2;
   text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
 }
 
-.primary-btn, .secondary-btn, .moveBtn {
+.primary-btn,
+.secondary-btn,
+.moveBtn {
   background: linear-gradient(90deg, #00fff2, #00b4d8);
   border: none;
   padding: 12px 24px;
@@ -26,7 +30,9 @@ h1, h2, h3 {
   box-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2 inset;
 }
 
-.primary-btn:hover, .secondary-btn:hover, .moveBtn:hover {
+.primary-btn:hover,
+.secondary-btn:hover,
+.moveBtn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2 inset;
 }
@@ -42,7 +48,7 @@ h1, h2, h3 {
 }
 
 .moveBtn {
-  min-width: 120px;
+  min-width: 150px;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -96,9 +102,10 @@ h1, h2, h3 {
   border: solid 1px #00ffdf;
 }
 
-.ranking-table th, .ranking-table td {
-      border-bottom: 1px solid #00fff24d;
-    padding: 2px;
+.ranking-table th,
+.ranking-table td {
+  border-bottom: 1px solid #00fff24d;
+  padding: 2px;
 }
 
 .ranking-table th {
@@ -120,25 +127,27 @@ h1, h2, h3 {
   text-align: left;
   box-shadow: 0 0 15px #ff00e6;
 }
+
 .history-table {
-margin: 15px auto;
+  margin: 15px auto;
   border-collapse: collapse;
-  width: 85%;
+  width: 50%;
   box-shadow: 0 0 15px #00fff2;
   border: solid 1px #00ffdf;
 }
 
-.history-table  th, .history-table  td {
-      border-bottom: 1px solid #00fff24d;
-    padding: 2px;
+.history-table th,
+.history-table td {
+  border-bottom: 1px solid #00fff24d;
+  padding: 2px;
 }
 
-.history-table  th {
+.history-table th {
   background-color: rgba(0, 255, 242, 0.2);
   text-shadow: 0 0 5px #00fff2;
 }
 
-.history-table  td {
+.history-table td {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -151,18 +160,16 @@ margin: 15px auto;
   flex-wrap: wrap;
 }
 
-/* Canvas dos gráficos */
 .chart-container canvas {
   background: rgba(0, 255, 242, 0.1);
   border: 1px solid #00fff2;
   border-radius: 12px;
   box-shadow: 0 0 15px #00fff2;
   padding: 10px;
-  max-width: 350px;
+  max-width: 450px;
   width: 100%;
 }
 
-/* Título dos gráficos */
 .chart-title {
   text-align: center;
   color: #00fff2;
@@ -172,7 +179,6 @@ margin: 15px auto;
   font-family: 'Orbitron', Arial, sans-serif;
 }
 
-/* Para legibilidade da legenda do gráfico */
 .chartjs-render-monitor {
   background-color: transparent !important;
 }
