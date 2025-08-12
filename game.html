@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pedra Papel Tesoura Solana</title>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.85.0/lib/index.iife.min.js"></script>
+    <link href="game.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ====================================================================================== -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"; import { getFirestore, collection, doc, setDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"; window._firebaseApp
+        = initializeApp({ apiKey: "AIzaSyAeuOfToF-0bU_0Jxk1vXaYL1CSRA6O9jQ", authDomain: "jokenpo-6ceea.firebaseapp.com", projectId: "jokenpo-6ceea", storageBucket: "jokenpo-6ceea.firebasestorage.app", messagingSenderId: "931042064624", appId: "1:931042064624:web:f40ea61e807b9cad6eaa35",
+        measurementId: "G-YYHFCSL3BP" }); window._firestore = getFirestore(window._firebaseApp); window._firestoreFuncs = { collection, doc, setDoc, getDocs, query, orderBy };
+    </script>
+    <!-- ====================================================================================== -->
+
+</head>
+
+<body>
+    <h1>JkenP - Solana</h1>
+
+    <button id="connectBtn" class="primary-btn">Connect Wallet</button>
+    <div id="walletInfo" class="info-text"></div>
+
+    <div id="game" class="hidden">
+        <label class="section-label">Play</label>
+        <div id="moveButtons" class="btn-group">
+            <button class="moveBtn" data-move="0">Rock</button>
+            <button class="moveBtn" data-move="1">Paper</button>
+            <button class="moveBtn" data-move="2">Scissors</button>
+        </div>
+
+        <div id="result" class="result-text"></div>
+        <div id="score" class="score-text"></div>
+
+        <h3>Last Moves</h3>
+        <div id="historyList" class="info-text">No history loaded.</div>
+    </div>
+    <div class="chart-container hidden" id="chartsSection">
+        <div>
+            <div class="chart-title">Player Choices</div>
+            <canvas id="choicesChart" width="300" height="300"></canvas>
+        </div>
+        <div>
+            <div class="chart-title">Wins per Choice</div>
+            <canvas id="winsChart" width="300" height="300"></canvas>
+        </div>
+    </div>
+    <!-- Firebase + Ranking Section -->
+    <div id="firebaseSection" class="hidden">
+        <h2>Register in Ranking</h2>
+        <label for="nicknameInput">Nickname (optional):</label>
+        <input type="text" id="nicknameInput" placeholder="Enter your nickname" />
+        <button id="registerFirebaseBtn" class="secondary-btn">Register</button>
+        <div id="firebaseStatus" class="info-text"></div>
+
+        <div id="rankingTableContainer">
+            <h3>Ranking</h3>
+            <button id="refreshRankingBtn" class="secondary-btn">Refresh Ranking</button>
+            <div id="rankingStatus" class="info-text small-text"></div>
+            <table id="rankingTable" class="ranking-table hidden">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>PublicKey</th>
+                        <th>Nickname</th>
+                        <th>Score</th>
+                        <th>Last Update</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="txLog" class="tx-log hidden"></div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
