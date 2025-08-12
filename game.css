@@ -1,0 +1,182 @@
+body {
+  font-family: 'Orbitron', Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #00fff2;
+  text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
+}
+
+.primary-btn, .secondary-btn, .moveBtn {
+  background: linear-gradient(90deg, #00fff2, #00b4d8);
+  border: none;
+  padding: 12px 24px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2 inset;
+}
+
+.primary-btn:hover, .secondary-btn:hover, .moveBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2 inset;
+}
+
+.secondary-btn {
+  background: linear-gradient(90deg, #ff00e6, #9d00ff);
+  color: #fff;
+  box-shadow: 0 0 10px #ff00e6, 0 0 20px #ff00e6 inset;
+}
+
+.secondary-btn:hover {
+  box-shadow: 0 0 20px #ff00e6, 0 0 30px #ff00e6 inset;
+}
+
+.moveBtn {
+  min-width: 120px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.section-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.result-text {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #00ff9d;
+  text-shadow: 0 0 8px #00ff9d;
+}
+
+.score-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffd700;
+  text-shadow: 0 0 8px #ffd700;
+}
+
+.info-text {
+  margin-top: 8px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.ranking-table {
+  margin: 15px auto;
+  border-collapse: collapse;
+  width: 85%;
+  box-shadow: 0 0 15px #00fff2;
+  border: solid 1px #00ffdf;
+}
+
+.ranking-table th, .ranking-table td {
+      border-bottom: 1px solid #00fff24d;
+    padding: 2px;
+}
+
+.ranking-table th {
+  background-color: rgba(0, 255, 242, 0.2);
+  text-shadow: 0 0 5px #00fff2;
+}
+
+.ranking-table td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tx-log {
+  margin-top: 20px;
+  background-color: rgba(10, 10, 10, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  text-align: left;
+  box-shadow: 0 0 15px #ff00e6;
+}
+.history-table {
+margin: 15px auto;
+  border-collapse: collapse;
+  width: 85%;
+  box-shadow: 0 0 15px #00fff2;
+  border: solid 1px #00ffdf;
+}
+
+.history-table  th, .history-table  td {
+      border-bottom: 1px solid #00fff24d;
+    padding: 2px;
+}
+
+.history-table  th {
+  background-color: rgba(0, 255, 242, 0.2);
+  text-shadow: 0 0 5px #00fff2;
+}
+
+.history-table  td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Container para os gráficos */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Canvas dos gráficos */
+.chart-container canvas {
+  background: rgba(0, 255, 242, 0.1);
+  border: 1px solid #00fff2;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00fff2;
+  padding: 10px;
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Título dos gráficos */
+.chart-title {
+  text-align: center;
+  color: #00fff2;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00fff2;
+  margin-bottom: 8px;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* Para legibilidade da legenda do gráfico */
+.chartjs-render-monitor {
+  background-color: transparent !important;
+}
+
+.hidden {
+  display: none;
+}
